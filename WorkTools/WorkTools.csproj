@@ -84,6 +84,12 @@
     <EmbeddedResource Include="Tools\FrmShowImage.resx">
       <DependentUpon>FrmShowImage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tools\OneInvoice\FrmOneInvoice.resx">
+      <DependentUpon>FrmOneInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="PrivateData\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,7 +104,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="PrivateData\" />
+    <Content Include="PrivateData\20230822-164642.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
