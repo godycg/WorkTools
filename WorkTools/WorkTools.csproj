@@ -66,12 +66,19 @@
     <Compile Include="Tools\FrmShowImage.Designer.cs">
       <DependentUpon>FrmShowImage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\ImageCompress\FrmImageCompress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ImageCompress\FrmImageCompress.Designer.cs">
+      <DependentUpon>FrmImageCompress.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\OneInvoice\FrmOneInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tools\OneInvoice\FrmOneInvoice.Designer.cs">
       <DependentUpon>FrmOneInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\IniHelper.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -81,6 +88,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Tools\FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools\FrmShowImage.resx">
       <DependentUpon>FrmShowImage.cs</DependentUpon>
     </EmbeddedResource>

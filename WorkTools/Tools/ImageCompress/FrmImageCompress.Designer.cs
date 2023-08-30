@@ -1,5 +1,5 @@
-﻿namespace WorkTools.Tools {
-    partial class FrmBase {
+﻿namespace WorkTools.Tools.ImageCompress {
+    partial class FrmImageCompress {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,18 +23,10 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.SuspendLayout();
-            // 
-            // FrmBase
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FrmBase";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmBase";
-            this.ResumeLayout(false);
-
+            this.Text = "FrmImageCompress";
         }
 
         #endregion

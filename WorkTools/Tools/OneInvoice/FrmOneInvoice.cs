@@ -13,6 +13,12 @@ namespace WorkTools.Tools.OneInvoice {
     public partial class FrmOneInvoice : FrmBase {
         public FrmOneInvoice() {
             InitializeComponent();
+            Init(this);
+            Console.WriteLine(ConfigPath);
+        }
+
+        public override void Init(FrmBase frm) {
+            base.Init(frm);
         }
 
         private void button1_Click(object sender, EventArgs e) {
