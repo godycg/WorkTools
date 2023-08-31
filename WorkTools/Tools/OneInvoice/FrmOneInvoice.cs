@@ -25,6 +25,7 @@ namespace WorkTools.Tools.OneInvoice {
             Console.WriteLine(ConfigPath);
             Console.WriteLine(LogPath);
             Console.WriteLine();
+            SetLog("写入日志");
         }
     }
 }

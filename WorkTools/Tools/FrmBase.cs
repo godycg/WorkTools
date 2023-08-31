@@ -38,7 +38,9 @@ namespace WorkTools.Tools {
         }
 
         private string logPath;
-
+        /// <summary>
+        /// 日志文件，根据每天的日期定义不同名称
+        /// </summary>
         public string LogPath {
             get {
                 logPath = Path.Combine(Application.StartupPath, "Log", this.AccessibilityObject.Name, $"{DateTime.Now.ToString("yyyy-MM-dd")}.log");
@@ -64,6 +66,24 @@ namespace WorkTools.Tools {
             }
             FileStream fs = File.Create(path);
             fs.Close();
+        }
+
+        /// <summary>
+        /// 写入日志
+        /// </summary>
+        /// <param name="log"></param>
+        protected void SetLog(string log) {
+            CreateFile(this.LogPath);
+            try {
+                using (FileStream fs = new FileStream(LogPath, FileMode.Append, FileAccess.Write, FileShare.Write)) {
+                    using (StreamWriter sw = new StreamWriter(fs)) {
+                        sw.AutoFlush = true;
+                        sw.WriteLine(DateTime.Now.ToString("[yyyy-MM-dd HH:mm:ss]") + log);
+                    }
+                }
+            } catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
