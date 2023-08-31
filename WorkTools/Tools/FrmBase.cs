@@ -19,7 +19,7 @@ namespace WorkTools.Tools {
         /// 初始化
         /// </summary>
         public virtual void Init(FrmBase frm) {
-            frm.ConfigPath = Path.Combine(Application.StartupPath, "Config", frm.Name + ".ini");
+            frm.ConfigPath = Path.Combine(Application.StartupPath, "Config", frm.AccessibilityObject.Name + ".ini");
             CreateConfigFile(frm.ConfigPath);
         }
 
