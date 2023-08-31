@@ -19,24 +19,39 @@ namespace WorkTools.Tools {
         /// 初始化
         /// </summary>
         public virtual void Init(FrmBase frm) {
-            frm.ConfigPath = Path.Combine(Application.StartupPath, "Config", frm.AccessibilityObject.Name + ".ini");
-            CreateConfigFile(frm.ConfigPath);
+            //frm.ConfigPath = Path.Combine(Application.StartupPath, "Config", frm.AccessibilityObject.Name + ".ini");
+            //frm.LogPath = Path.Combine(Application.StartupPath, "Log", frm.AccessibilityObject.Name + ".log");
+            CreateFile(frm.ConfigPath);
+            //CreateFile(frm.LogPath);
         }
 
         private string configPath;
 
         /// <summary>
-        /// 创建配置文件
+        /// 配置文件
         /// </summary>
         public string ConfigPath {
-            get { return configPath; }
-            set { configPath = value; }
+            get { 
+                configPath = Path.Combine(Application.StartupPath, "Config", this.AccessibilityObject.Name + ".ini");
+                return configPath; 
+            }
         }
+
+        private string logPath;
+
+        public string LogPath {
+            get {
+                logPath = Path.Combine(Application.StartupPath, "Log", this.AccessibilityObject.Name, $"{DateTime.Now.ToString("yyyy-MM-dd")}.log");
+                return logPath;
+            }
+        }
+
+
         /// <summary>
         /// 文件路径
         /// </summary>
         /// <param name="path"></param>
-        private void CreateConfigFile(string path) {
+        private void CreateFile(string path) {
             if (string.IsNullOrWhiteSpace(path)) {
                 return;
             }

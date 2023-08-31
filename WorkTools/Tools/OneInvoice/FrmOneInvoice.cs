@@ -14,7 +14,7 @@ namespace WorkTools.Tools.OneInvoice {
         public FrmOneInvoice() {
             InitializeComponent();
             Init(this);
-            Console.WriteLine(ConfigPath);
+            //Console.WriteLine(ConfigPath);
         }
 
         public override void Init(FrmBase frm) {
@@ -22,8 +22,9 @@ namespace WorkTools.Tools.OneInvoice {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            var frm = new Tools.FrmShowImage(Path.Combine(Application.StartupPath, "PrivateData", "20230822-164642.png"));
-            frm.ShowDialog();
+            Console.WriteLine(ConfigPath);
+            Console.WriteLine(LogPath);
+            Console.WriteLine();
         }
     }
 }

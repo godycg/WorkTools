@@ -78,6 +78,7 @@
     <Compile Include="Tools\OneInvoice\FrmOneInvoice.Designer.cs">
       <DependentUpon>FrmOneInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\DbHelper.cs" />
     <Compile Include="Utils\IniHelper.cs" />
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -96,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\FrmShowImage.resx">
       <DependentUpon>FrmShowImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ImageCompress\FrmImageCompress.resx">
+      <DependentUpon>FrmImageCompress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\OneInvoice\FrmOneInvoice.resx">
       <DependentUpon>FrmOneInvoice.cs</DependentUpon>
